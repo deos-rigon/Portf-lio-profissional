@@ -14,7 +14,7 @@ const projects = [
     company: "Personalize IT, '24",
     description: "Desenvolvimento de uma solução estratégica que integra people analytics e market data para impulsionar a governança e o crescimento sustentável.",
     image: "https://picsum.photos/seed/stadia/1200/800",
-    video: "https://cdn.pixabay.com/video/2023/05/24/164314-829928509_large.mp4", // Placeholder for the uploaded video
+    video: "https://raw.githubusercontent.com/deos-rigon/Portf-lio-profissional/main/V%C3%ADdeo%20Evermonte.mp4", // Raw GitHub URL for the project video
     link: "#",
   },
   {
