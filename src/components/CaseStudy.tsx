@@ -79,8 +79,8 @@ export default function CaseStudy({ id, onBack }: CaseStudyProps) {
       className="relative text-white overflow-x-hidden"
     >
       {/* Orange Glow Background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[800px] bg-orange-500/[0.12] rounded-full blur-[150px] pointer-events-none -z-10" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-orange-400/[0.08] rounded-full blur-[100px] pointer-events-none -z-10" />
+      <div className="absolute top-0 left-0 w-full h-[1000px] bg-orange-500/[0.08] blur-[180px] pointer-events-none -z-10" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-orange-300/[0.04] blur-[120px] pointer-events-none -z-10" />
 
       {/* Top Navigation / Back Button */}
       <div className="fixed top-8 left-8 md:top-12 md:left-12 z-50">
@@ -102,13 +102,13 @@ export default function CaseStudy({ id, onBack }: CaseStudyProps) {
       </div>
 
       {/* Hero Section - Centered Title & Large Image */}
-      <section id="overview" className="pt-32 md:pt-20 pb-32 flex flex-col items-center text-center px-6 md:px-0">
-        <div className="space-y-6 mb-20 max-w-5xl mx-auto">
+      <section id="overview" className="pt-32 md:pt-20 pb-32 flex flex-col items-center text-center w-full">
+        <div className="space-y-6 mb-20 max-w-5xl mx-auto px-6">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-8xl lg:text-[10rem] font-medium tracking-tight md:tracking-tighter leading-none bg-gradient-to-b from-white via-white/90 to-white/10 bg-clip-text text-transparent"
+            className="text-4xl md:text-8xl lg:text-[10rem] font-medium tracking-tight md:tracking-tighter leading-none bg-gradient-to-b from-white via-white/95 to-white/40 bg-clip-text text-transparent"
           >
             EVERMONTE INSTITUTE
           </motion.h1>
@@ -135,13 +135,14 @@ export default function CaseStudy({ id, onBack }: CaseStudyProps) {
             referrerPolicy="no-referrer"
           />
           {/* Subtle overlay to match the reference depth */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
         </motion.div>
       </section>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-20">
-        {/* Main Content */}
-        <div className="space-y-32">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-20">
+          {/* Main Content */}
+          <div className="space-y-32">
           {/* Metadata Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-y border-white/5">
             <div className="space-y-2">
@@ -292,6 +293,7 @@ export default function CaseStudy({ id, onBack }: CaseStudyProps) {
           </div>
         </aside>
       </div>
-    </motion.div>
+    </div>
+  </motion.div>
   );
 }

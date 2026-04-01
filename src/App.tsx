@@ -338,10 +338,10 @@ export default function App() {
         </div>
       )}
 
-      <main className={`px-6 md:px-12 pb-20 max-w-7xl mx-auto ${currentCase ? 'pt-0' : 'pt-32'}`}>
+      <main className={`${currentCase ? 'w-full' : 'px-6 md:px-12 pb-20 max-w-7xl mx-auto pt-32'}`}>
         <AnimatePresence mode="wait">
           {currentCase ? (
-            <motion.div key="case-study">
+            <motion.div key="case-study" className="w-full">
               <CaseStudy id={currentCase as string} onBack={() => setCurrentCase(null)} />
             </motion.div>
           ) : activeTab === "work" ? (
