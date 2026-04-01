@@ -11,13 +11,13 @@ import LoadingScreen from "./components/LoadingScreen";
 import CaseStudy from "./components/CaseStudy";
 
 const clients = [
-  { name: "F4B Capital", src: "https://eduardodeosdesign.com.br/wp-content/uploads/2026/03/Logotipo-F4B-Capital-1.svg" },
-  { name: "Une World", src: "https://eduardodeosdesign.com.br/wp-content/uploads/2026/03/UNEWORLD-LOGO-1.svg" },
-  { name: "Personalize iT", src: "https://eduardodeosdesign.com.br/wp-content/uploads/2026/03/PERSONALIZE-LOGO-1.svg" },
-  { name: "CG Contadores", src: "https://eduardodeosdesign.com.br/wp-content/uploads/2026/03/CG_logo-1.svg" },
-  { name: "FX Capital", src: "https://eduardodeosdesign.com.br/wp-content/uploads/2026/03/FXCAPITAL-LOGO-1.svg" },
-  { name: "Evermonte Institute", src: "https://eduardodeosdesign.com.br/wp-content/uploads/2026/03/EINSTITUTE-LOGO-1.svg" },
-  { name: "Evermonte", src: "https://eduardodeosdesign.com.br/wp-content/uploads/2026/03/EVERMONTE-LOGO-1.svg" },
+  { name: "F4B Capital", src: "https://upload.eduardodeosdesign.com/wp-content/uploads/2026/03/Logotipo-F4B-Capital-1.svg" },
+  { name: "Une World", src: "https://upload.eduardodeosdesign.com/wp-content/uploads/2026/03/UNEWORLD-LOGO-1.svg" },
+  { name: "Personalize iT", src: "https://upload.eduardodeosdesign.com/wp-content/uploads/2026/03/PERSONALIZE-LOGO-1.svg" },
+  { name: "CG Contadores", src: "https://upload.eduardodeosdesign.com/wp-content/uploads/2026/03/CG_logo-1.svg" },
+  { name: "FX Capital", src: "https://upload.eduardodeosdesign.com/wp-content/uploads/2026/03/FXCAPITAL-LOGO-1.svg" },
+  { name: "Evermonte Institute", src: "https://upload.eduardodeosdesign.com/wp-content/uploads/2026/03/EINSTITUTE-LOGO-1.svg" },
+  { name: "Evermonte", src: "https://upload.eduardodeosdesign.com/wp-content/uploads/2026/03/EVERMONTE-LOGO-1.svg" },
 ];
 
 const projects = [
@@ -26,7 +26,7 @@ const projects = [
     title: "Evermonte Institute",
     company: "Personalize IT, '24",
     description: "Desenvolvimento de uma solução estratégica que integra people analytics e market data para impulsionar a governança e o crescimento sustentável.",
-    video: "https://eduardodeosdesign.com.br/wp-content/uploads/2026/03/Video-Evermonte.mp4", // Raw GitHub URL for the project video
+    video: "https://upload.eduardodeosdesign.com/wp-content/uploads/2026/03/Video-Evermonte.mp4", // Raw GitHub URL for the project video
     link: "#",
   },
   {
@@ -183,7 +183,7 @@ export default function App() {
           className="z-10"
         >
           <img 
-            src="https://eduardodeosdesign.com.br/wp-content/uploads/2026/03/logo.svg" 
+            src="https://upload.eduardodeosdesign.com/wp-content/uploads/2026/03/logo.svg" 
             alt="Eduardo Deos Logo" 
             className="h-5 md:h-8 w-auto"
             draggable={false}
@@ -723,7 +723,7 @@ export default function App() {
             {/* Footer Logo */}
             <div className="opacity-50 hover:opacity-100 transition-opacity duration-500">
               <img 
-                src="https://eduardodeosdesign.com.br/wp-content/uploads/2026/03/logo.svg" 
+                src="https://upload.eduardodeosdesign.com/wp-content/uploads/2026/03/logo.svg" 
                 alt="Eduardo Deos Logo" 
                 className="h-6 md:h-8 w-auto"
                 draggable={false}
