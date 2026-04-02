@@ -30,11 +30,11 @@ const projects = [
     link: "#",
   },
   {
-    id: "test-hub",
-    title: "Test Hub Next",
-    company: "Google, '22",
-    description: "Imaginando o futuro do playtesting para todos os desenvolvedores.",
-    image: "https://picsum.photos/seed/testhub/1200/800",
+    id: "design-system-cg",
+    title: "Design System / CG Contadores",
+    company: "CG Contadores, '24 e '25",
+    description: "Desenvolvimento da biblioteca de componentes e sistema e ciclo de design da CG Contadores.",
+    video: "https://upload.eduardodeosdesign.com/wp-content/uploads/2026/04/Animado.mp4",
     link: "#",
   },
   {
@@ -484,65 +484,71 @@ export default function App() {
               {/* Projects Grid */}
               <section className="space-y-8 md:space-y-12 mt-12">
                 {projects.map((project, i) => (
-                  <motion.div
-                    key={project.id}
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    onClick={() => {
-                      if (project.id === "evermonte") {
-                        setCurrentCase("evermonte");
-                        window.scrollTo({ top: 0, behavior: 'instant' });
-                      }
-                    }}
-                    className={`group relative bg-[#0F0F0F] rounded-[40px] border border-white/5 p-8 md:p-16 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden ${project.id === "evermonte" ? "cursor-pointer" : ""}`}
-                  >
-                    {/* Project Header */}
-                    <div className="flex justify-between items-start mb-16">
-                      <div className="space-y-3">
-                        <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-white">
-                          {project.title}
-                        </h2>
-                        <p className="text-base md:text-lg text-white/40 max-w-2xl">
-                          <span className="font-semibold text-white">{project.company}</span> — {project.description}
-                        </p>
+                    <motion.div
+                      key={project.id}
+                      initial={{ opacity: 0, y: 40 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      whileHover={{ y: -8, scale: 1.01 }}
+                      viewport={{ once: true, margin: "-100px" }}
+                      transition={{ 
+                        duration: 0.8, 
+                        ease: "easeOut",
+                        scale: { duration: 0.4, ease: "easeOut" },
+                        y: { duration: 0.4, ease: "easeOut" }
+                      }}
+                      onClick={() => {
+                        if (project.id === "evermonte") {
+                          setCurrentCase("evermonte");
+                          window.scrollTo({ top: 0, behavior: 'instant' });
+                        }
+                      }}
+                      className={`group relative bg-[#0F0F0F] rounded-[40px] border border-white/5 p-8 md:p-16 shadow-sm hover:shadow-[0_20px_80px_-20px_rgba(255,255,255,0.08)] hover:border-white/10 transition-all duration-500 overflow-hidden ${project.id === "evermonte" ? "cursor-pointer" : ""}`}
+                    >
+                      {/* Project Header */}
+                      <div className="flex justify-between items-start mb-16">
+                        <div className="space-y-3">
+                          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-white group-hover:text-white transition-colors duration-300">
+                            {project.title}
+                          </h2>
+                          <p className="text-base md:text-lg text-white/40 max-w-2xl group-hover:text-white/60 transition-colors duration-300">
+                            <span className="font-semibold text-white">{project.company}</span> — {project.description}
+                          </p>
+                        </div>
+                        <motion.div 
+                          whileHover={{ x: 5 }}
+                          className="text-white/30 group-hover:text-white transition-colors duration-300"
+                        >
+                          <ArrowRight size={32} strokeWidth={1.5} />
+                        </motion.div>
                       </div>
-                      <motion.div 
-                        whileHover={{ x: 5 }}
-                        className="text-white/30 group-hover:text-white transition-colors duration-300"
-                      >
-                        <ArrowRight size={32} strokeWidth={1.5} />
-                      </motion.div>
-                    </div>
 
-                    {/* Project Media Container */}
-                    <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden bg-zinc-900 shadow-lg border border-white/5">
-                      {project.video ? (
-                        <video
-                          src={project.video}
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                          className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
-                        />
-                      ) : (
-                        <motion.img
-                          src={project.image}
-                          alt={project.title}
-                          referrerPolicy="no-referrer"
-                          className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 opacity-80 group-hover:opacity-100"
-                        />
-                      )}
-                      
-                      {/* Dark Overlay - Fades on hover */}
-                      <div className="absolute inset-0 bg-black/60 group-hover:bg-black/0 transition-all duration-700 ease-in-out" />
-                    </div>
+                      {/* Project Media Container */}
+                      <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-zinc-900 shadow-lg border border-white/5 transition-all duration-500 group-hover:border-white/10">
+                        {project.video ? (
+                          <video
+                            src={project.video}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full h-full object-contain bg-black transition-transform duration-1000 ease-out group-hover:scale-105"
+                          />
+                        ) : (
+                          <motion.img
+                            src={project.image}
+                            alt={project.title}
+                            referrerPolicy="no-referrer"
+                            className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                          />
+                        )}
+                        
+                        {/* Subtle Gradient Overlay - Only at the bottom for depth */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                      </div>
 
-                    {/* Background Decorative Glow (Subtle) */}
-                    <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-white/5 rounded-full blur-[100px] pointer-events-none group-hover:bg-white/10 transition-all duration-700" />
-                  </motion.div>
+                      {/* Background Decorative Glow (Subtle) */}
+                      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-white/5 rounded-full blur-[100px] pointer-events-none group-hover:bg-white/15 group-hover:scale-110 transition-all duration-700" />
+                    </motion.div>
                 ))}
               </section>
             </motion.div>
